@@ -1,9 +1,9 @@
-from playwright.sync_api import expect
+from playwright.sync_api import expect, Page
 
 
 class PasswordNewPage():
 
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
         self._enterNewPasswordHeader = page.locator("h3.card-title")
         self._emailTextbox = page.locator("input[formcontrolname='userEmail']")

@@ -4,7 +4,7 @@ from playwright.sync_api import expect, Page
 class RegisterPage():
 
 
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
         self._registerHeader = page.locator("h1.login-title")
         self._firstName = page.locator("input#firstName")

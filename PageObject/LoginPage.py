@@ -1,9 +1,11 @@
+from playwright.sync_api import Page
+
 from PageObject.DashboardPage import DashboardPage
 
 
 class LoginPage():
 
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
         self._emailTextbox = page.locator("#userEmail")
         self._passwordTextbox = page.locator("#userPassword")
